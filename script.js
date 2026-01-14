@@ -61,11 +61,11 @@ function setProvince(pId) {
   gid("message").innerHTML = `selected ${pId}`;
   // if not null: delete province from the current country object that it is in
   if (selected.parent !== null) {
-      selected.parent.removeTerr(pId);
+    selected.parent.removeTerr(pId);
   }
   // set the province's country to current country object
   selected.setParent(countries.get(currentCountry));
-  gid("message").innerHTML = `set ${pId} parent to ${selecte,,,d.parent.name}`;
+  gid("message").innerHTML = `set ${pId} parent to ${selecte,,, d.parent.name}`;
   // add province to current country object
   selected.parent.addTerr(pId);
 }
@@ -73,7 +73,7 @@ function setProvince(pId) {
 function getMapSVG() {
   fetch("assets/us_map.svg").then(res => res.text()).then(svg => {
     gid("map-container").innerHTML = svg;
-    
+
     const paths = document.querySelectorAll('.state path');
 
     paths.forEach(st => {
@@ -86,7 +86,7 @@ function getMapSVG() {
 
       st.addEventListener('click', () => {
         pId = st.classList;
-        //gid("message").innerHTML = `q selected ${pId}`;
+        gid("message").innerHTML = `q selected ${pId}`;
         try {
           selectedProvince = provinces.get(pId);  // Province object 
         } catch (e) {
