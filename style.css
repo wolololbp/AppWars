@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#map-container {
+  user-select: none; 
+}
+
+.state path {
+  fill: #eeeeee;
+  stroke: #333;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.state path:hover {
+  fill: #cccccc;
+}
+
+.state path.selected {
+  fill: red;
+}
+
+.state.active {
+  fill: #ffcc00;
+}
