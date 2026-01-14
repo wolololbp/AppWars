@@ -25,3 +25,29 @@ html {
 .state.active {
   fill: #ffcc00;
 }
+
+/* --- Edit lock UI --- */
+#auth-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.75rem 0 1rem;
+}
+
+#edit-password {
+  min-width: 14rem;
+}
+
+#lock-status.locked {
+  font-weight: 600;
+}
+
+#lock-status.unlocked {
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
